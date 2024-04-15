@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -14,7 +15,7 @@ import {
 const DisplayForecastData = () => {
   const { city } = useParams();
   const [forecastData, setForecastData] = useState([]);
-  const [today, setToday] = useState<WeatherData | null>(null);
+  const [today, setToday] = useState<WeatherData | any>(null);
 
   useEffect(() => {
     const fetchForecastData = async () => {
@@ -73,7 +74,7 @@ const DisplayForecastData = () => {
           </section>
 
           <section className="flex overflow-x-auto mt-4 pb-2 mb-5">
-            {forecastData.map((forecast, index) => (
+            {forecastData.map((forecast: any, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center mx-2 bg-gradient-to-br from-blue-200 to-blue-400 text-white rounded-lg shadow-md p-3"

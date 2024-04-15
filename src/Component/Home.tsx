@@ -1,6 +1,5 @@
 import AllCities from "./AllCities";
 import Header from "./Header";
-import SearchInput from "./Search";
 
 const Home = () => {
   return (

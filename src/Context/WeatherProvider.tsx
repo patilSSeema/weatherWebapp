@@ -4,7 +4,7 @@ import { WeatherContext } from "./WeatherContext";
 import useForcastData from "../Component/hooks/useForecast";
 interface WeatherProviderProps {
   children: React.ReactNode; // Properly typing the children prop
-  city: string;
+  city?: string;
 }
 
 const WeatherProvider: React.FC<WeatherProviderProps> = ({ children }) => {

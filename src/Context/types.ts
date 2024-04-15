@@ -1,6 +1,10 @@
-
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type WeatherData = {
+  main: any
+  wind: any
+  pop: number
+  clouds: any
+  visibility: number
   name: string,
   country: string,
   sunrise: number
@@ -29,7 +33,7 @@ export type WeatherData = {
     }
   ]
 
-  weather: {},
+  weather: object[],
 
 }
 export type optionType = {
